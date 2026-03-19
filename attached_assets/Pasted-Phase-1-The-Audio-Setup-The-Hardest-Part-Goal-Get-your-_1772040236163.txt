@@ -1,0 +1,19 @@
+Phase 1: The Audio Setup (The Hardest Part)
+Goal: Get your computer to secretly listen to its own speakers.
+
+Prompt 1: "I am a beginner building a local Python app. I want my script to listen to the incoming system audio (what the other person on a Google Meet call is saying) without picking up my own microphone. I am using [Insert OS] with [Insert Hardware]. Can you give me the step-by-step instructions to set up virtual audio cables if needed, and the basic Python code to record 5 seconds of system audio and save it as a test file?"
+
+Phase 2: Local Transcription (Speech-to-Text)
+Goal: Turn that audio into text using your own machine.
+
+Prompt 2: "Great, the audio capture works. Now I want to transcribe that audio into text completely locally, without the internet. Please give me the code to integrate faster-whisper (or the best local Whisper model for my hardware). I want the script to capture audio in small chunks, transcribe it instantly, and print the text to my console."
+
+Phase 3: Local AI Brain (Generating Answers)
+Goal: Read the text and give you the answers.
+
+Prompt 3: "The transcription is working perfectly. Now I need to feed this text to a local Large Language Model to act as my interview copilot. I plan to use Ollama (running a lightweight model like Llama-3). Please write the Python code that takes the transcribed text, sends it to my local Ollama server with a prompt like 'You are an expert assistant. Read this transcription and generate short, 3-bullet-point answers to any questions asked,' and prints the AI's response."
+
+Phase 4: The Secret Screen (The User Interface)
+Goal: Show you the answers without the other person knowing.
+
+Prompt 4: "Everything is connected. Now I need a 'Stealth UI'. Please write Python code using Tkinter (or PyQt) to create a minimalist, semi-transparent, borderless window that stays 'always on top' of all my other windows. Connect my existing AI pipeline to this UI so the generated bullet points appear as text in this floating window. It needs a tiny button to clear the text."
