@@ -1,0 +1,27 @@
+directories:
+  output: dist-electron
+  buildResources: build
+appId: com.interviewcopilot.app
+productName: Interview Copilot
+files:
+  - filter:
+      - electron/**/*
+      - dist/**/*
+      - package.json
+mac:
+  category: public.app-category.productivity
+  target:
+    - dmg
+    - zip
+  icon: electron/icon.png
+win:
+  target:
+    - nsis
+    - portable
+  icon: electron/icon.png
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Utility
+electronVersion: 41.0.2
