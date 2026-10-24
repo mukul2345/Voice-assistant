@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Mode Professional Minimal Theme */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Deep, sleek dark palette */
+  --background: 0 0% 4%;
+  --foreground: 0 0% 98%;
+  
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 98%;
+  
+  --popover: 0 0% 7%;
+  --popover-foreground: 0 0% 98%;
+  
+  --primary: 220 80% 56%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 60%;
+  
+  --accent: 220 80% 56%;
+  --accent-foreground: 0 0% 100%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 0 0% 14%;
+  --input: 0 0% 14%;
+  --ring: 220 80% 56%;
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    /* Ensure scrollbar looks dark and sleek */
+    color-scheme: dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 shadow-2xl;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px hsla(var(--primary) / 0.5);
+  }
+  
+  .animate-recording-pulse {
+    animation: recordingPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes recordingPulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    opacity: .7;
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}

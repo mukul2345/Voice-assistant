@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Env and secrets (never commit API keys)
+.env
+.env.local
+.env.*.local
+
+# Build and runtime
+dist/
+dist-electron/
+uploads/
+data/
+
+# IDE and OS
+.DS_Store
+*.log
